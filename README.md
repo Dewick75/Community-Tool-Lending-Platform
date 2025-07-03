@@ -231,7 +231,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 <p align="center">
   <img src="public/add.png" alt="Add Tool" width="600" />
-  <img src="public/update.png" alt="Add Tool" width="600" />
+
   <br/>
   <em>Add Tool: List a new tool for your community</em>
 </p>

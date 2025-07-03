@@ -35,7 +35,7 @@ interface EditToolFormProps {
 }
 
 export default function EditToolForm({ id, name, description }: EditToolFormProps) {
-    const [, setTool] = useState<Tool | null>(null);
+    const [tool, setTool] = useState<Tool | null>(null);
     const [loading, setLoading] = useState(true);
 
     // Form states
@@ -198,7 +198,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="text"
                                         onChange={(e) => setNewName(e.target.value)}
                                         value={newName}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="e.g., Electric Drill, Lawn Mower"
                                         required
                                     />
@@ -212,7 +212,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         id="category"
                                         onChange={(e) => setCategory(e.target.value)}
                                         value={category}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         required
                                     >
                                         {categories.map(cat => (
@@ -231,7 +231,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                     onChange={(e) => setNewDescription(e.target.value)}
                                     value={newDescription}
                                     rows={4}
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 resize-none" style={{ color: 'black' }}
+                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 resize-none text-gray-900 bg-white"
                                     placeholder="Describe your tool, its condition, and any special features..."
                                     required
                                 />
@@ -246,7 +246,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         id="condition"
                                         onChange={(e) => setCondition(e.target.value)}
                                         value={condition}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                     >
                                         {conditions.map(cond => (
                                             <option key={cond} value={cond}>{cond}</option>
@@ -262,7 +262,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         id="availability"
                                         onChange={(e) => setAvailability(e.target.value)}
                                         value={availability}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                     >
                                         {availabilityOptions.map(option => (
                                             <option key={option} value={option}>
@@ -281,7 +281,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="text"
                                         onChange={(e) => setTags(e.target.value)}
                                         value={tags}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="e.g., cordless, 18V, battery"
                                     />
                                 </div>
@@ -302,7 +302,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="text"
                                         onChange={(e) => setCity(e.target.value)}
                                         value={city}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="e.g., Colombo"
                                         required
                                     />
@@ -317,7 +317,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="text"
                                         onChange={(e) => setArea(e.target.value)}
                                         value={area}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="e.g., Nugegoda"
                                         required
                                     />
@@ -332,7 +332,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="text"
                                         onChange={(e) => setPostalCode(e.target.value)}
                                         value={postalCode}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="e.g., 10250"
                                     />
                                 </div>
@@ -353,7 +353,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="text"
                                         onChange={(e) => setOwnerName(e.target.value)}
                                         value={ownerName}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300" style={{ color: 'black' }}
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="Your full name"
                                         required
                                     />
@@ -368,7 +368,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         type="email"
                                         onChange={(e) => setOwnerEmail(e.target.value)}
                                         value={ownerEmail}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300"
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="your.email@example.com"
                                         required
                                     />
@@ -384,7 +384,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                     type="tel"
                                     onChange={(e) => setOwnerPhone(e.target.value)}
                                     value={ownerPhone}
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300"
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                     placeholder="+94 77 123 4567"
                                 />
                             </div>
@@ -406,7 +406,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         max="30"
                                         onChange={(e) => setMaxDuration(Number(e.target.value))}
                                         value={maxDuration}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300"
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                     />
                                 </div>
 
@@ -420,7 +420,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                         min="0"
                                         onChange={(e) => setDeposit(Number(e.target.value))}
                                         value={deposit}
-                                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300"
+                                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 text-gray-900 bg-white"
                                         placeholder="0"
                                     />
                                 </div>
@@ -435,7 +435,7 @@ export default function EditToolForm({ id, name, description }: EditToolFormProp
                                     onChange={(e) => setInstructions(e.target.value)}
                                     value={instructions}
                                     rows={3}
-                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 resize-none"
+                                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 transition-all duration-300 resize-none text-gray-900 bg-white"
                                     placeholder="Any special care instructions, pickup arrangements, etc."
                                 />
                             </div>

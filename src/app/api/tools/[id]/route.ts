@@ -1,13 +1,39 @@
 import connectMongoDB from "@/lib/mongodb";
 import Tool from "@/models/tool";
 import { NextResponse } from "next/server";
+import mongoose from "mongoose";
 
 // GET a single tool by ID
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
-  await connectMongoDB();
-  const tool = await Tool.findOne({ _id: id });
-  return NextResponse.json({ tool }, { status: 200 });
+  try {
+    const { id } = await params;
+    console.log("🔍 GET /api/tools/[id] - Fetching tool:", id);
+
+    // Validate ObjectId format
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      console.log("❌ Invalid ObjectId format:", id);
+      return NextResponse.json({ error: "Invalid tool ID format" }, { status: 400 });
+    }
+
+    await connectMongoDB();
+    console.log("🔗 Database connected for GET");
+
+    const tool = await Tool.findOne({ _id: id });
+
+    if (!tool) {
+      console.log("❌ Tool not found:", id);
+      return NextResponse.json({ error: "Tool not found" }, { status: 404 });
+    }
+
+    console.log("✅ Tool found:", tool._id);
+    return NextResponse.json({ tool }, { status: 200 });
+  } catch (error) {
+    console.error("❌ Error fetching tool:", error);
+    return NextResponse.json({
+      error: "Failed to fetch tool",
+      details: error instanceof Error ? error.message : String(error)
+    }, { status: 500 });
+  }
 }
 
 // UPDATE a tool by ID
@@ -18,6 +44,12 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 
     console.log("🔄 PUT /api/tools/[id] - Updating tool:", id);
     console.log("📋 Update data:", toolData);
+
+    // Validate ObjectId format
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      console.log("❌ Invalid ObjectId format:", id);
+      return NextResponse.json({ error: "Invalid tool ID format" }, { status: 400 });
+    }
 
     await connectMongoDB();
     console.log("🔗 Database connected for PUT");

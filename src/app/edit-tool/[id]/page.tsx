@@ -1,17 +1,36 @@
 import EditToolForm from "@/components/EditToolForm";
+import connectMongoDB from "@/lib/mongodb";
+import Tool from "@/models/tool";
+import mongoose from "mongoose";
 
 const getToolById = async (id: string) => {
     try {
-        // Use relative URL to avoid port issues
-        const res = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3001'}/api/tools/${id}`, {
-            cache: 'no-store',
-        });
-        if (!res.ok) {
-            throw new Error("Failed to fetch tool");
+        console.log("🔍 Server-side fetching tool:", id);
+
+        // Validate ObjectId format
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            console.log("❌ Invalid ObjectId format:", id);
+            return { tool: null };
         }
-        return res.json();
+
+        await connectMongoDB();
+        console.log("🔗 Database connected for server-side fetch");
+
+        const tool = await Tool.findOne({ _id: id }).lean();
+
+        if (!tool) {
+            console.log("❌ Tool not found:", id);
+            return { tool: null };
+        }
+
+        console.log("✅ Tool found server-side:", (tool as any)._id);
+
+        // Convert MongoDB document to plain object
+        const plainTool = JSON.parse(JSON.stringify(tool));
+
+        return { tool: plainTool };
     } catch (error) {
-        console.log("Error loading tool: ", error);
+        console.error("❌ Error loading tool server-side:", error);
         return { tool: null };
     }
 };
@@ -24,8 +43,8 @@ export default async function EditTool({ params }: { params: Promise<{ id: strin
         return (
             <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 flex items-center justify-center">
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-red-600 mb-4" style={{ color: 'black' }}>Tool Not Found</h1>
-                    <p className="text-gray-600" style={{ color: 'black' }}>The tool you&apos;re looking for doesn&apos;t exist or has been removed.</p>
+                    <h1 className="text-2xl font-bold text-red-600 mb-4">Tool Not Found</h1>
+                    <p className="text-gray-600">The tool you're looking for doesn't exist or has been removed.</p>
                 </div>
             </div>
         );

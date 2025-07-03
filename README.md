@@ -217,16 +217,21 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## 🖼️ Screenshots
 
-> _Add screenshots of your app below. Replace the example image paths with your own._
+
 
 <p align="center">
   <img src="public/example-homepage.png" alt="Homepage" width="600" />
+    <img src="public/example-homepage1.png" alt="Homepage" width="600" />
+     <img src="public/example-homepage2.png" alt="Homepage" width="600" />
+      <img src="public/example-homepage3.png" alt="Homepage" width="600" />
+
   <br/>
   <em>Homepage: Browse and search for tools</em>
 </p>
 
 <p align="center">
-  <img src="public/example-add-tool.png" alt="Add Tool" width="600" />
+  <img src="public/add.png" alt="Add Tool" width="600" />
+  <img src="public/update.png" alt="Add Tool" width="600" />
   <br/>
   <em>Add Tool: List a new tool for your community</em>
 </p>

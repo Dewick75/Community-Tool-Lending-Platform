@@ -169,6 +169,218 @@ For questions, suggestions, or feedback, please contact [your-email@example.com]
 </p>
 *Clone the repository:**
    ```bash
+git clone https://github.com/your-username/community-tool-lending-platform.git
+   cd community-tool-lending-platform/my-tool-lending-app
+```
+
+2. **Install dependencies:**
+   ```bash
+npm install
+   # or
+yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+```
+
+
+3. **Configure Environment Variables:**
+   
+   Create a `.env.local` file in the root of `my-tool-lending-app` and add your MongoDB connection string:
+   ```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+
+4. **Run the Development Server:**
+   ```bash
+npm run dev
+   # or
+yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+---
+
+
+## 📖 Usage
+
+- **Browse Tools:** View all available tools on the homepage.
+- **Search & Filter:** Use the search bar and filters to find tools by category, location, or keyword.
+- **Add a Tool:** Click "Add Tool" to list a new item for your community.
+- **Edit/Remove:** Manage your listings from your profile or the tool details page.
+- **Borrow Tools:** Request to borrow tools from other users (feature in progress).
+- **Rate & Review:** Leave feedback after borrowing or lending (coming soon).
+
+---
+
+
+## 🖼️ Screenshots
+
+> _Add screenshots of your app below. Replace the example image paths with your own._
+
+<p align="center">
+  <img src="public/example-homepage.png" alt="Homepage" width="600" />
+  <br/>
+  <em>Homepage: Browse and search for tools</em>
+</p>
+
+<p align="center">
+  <img src="public/example-add-tool.png" alt="Add Tool" width="600" />
+  <br/>
+  <em>Add Tool: List a new tool for your community</em>
+</p>
+
+---
+
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Whether you want to fix a bug, add a feature, or improve documentation, your help is appreciated.
+
+**How to contribute:**
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
+
+---
+
+
+## 📬 Contact
+
+For questions, suggestions, or feedback, please contact [dulanjaya.pasindu1130@gmail.com](mailto:dulanjaya.pasindu1130@gmail.com).
+
+
+---
+
+<p align="center">
+  <em>Built with ❤️ using Next.js, React, Node.js, Express, and MongoDB.</em>
+</p>
+*Clone the repository:**
+   ```bash
+git clone https://github.com/Dewick75/community-tool-lending-platform.git
+   cd community-tool-lending-platform/my-tool-lending-app
+```
+
+2. **Install dependencies:**
+   ```bash
+npm install
+   # or
+yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+```
+
+
+3. **Configure Environment Variables:**
+   
+   Create a `.env.local` file in the root of `my-tool-lending-app` and add your MongoDB connection string:
+   ```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+
+4. **Run the Development Server:**
+   ```bash
+npm run dev
+   # or
+yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+```
+
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+---
+
+
+## 📖 Usage
+
+- **Browse Tools:** View all available tools on the homepage.
+- **Search & Filter:** Use the search bar and filters to find tools by category, location, or keyword.
+- **Add a Tool:** Click "Add Tool" to list a new item for your community.
+- **Edit/Remove:** Manage your listings from your profile or the tool details page.
+- **Borrow Tools:** Request to borrow tools from other users (feature in progress).
+- **Rate & Review:** Leave feedback after borrowing or lending (coming soon).
+
+---
+
+
+## 🖼️ Screenshots
+
+> _Add screenshots of your app below. Replace the example image paths with your own._
+
+<p align="center">
+  <img src="public/example-homepage.png" alt="Homepage" width="600" />
+  <br/>
+  <em>Homepage: Browse and search for tools</em>
+</p>
+
+<p align="center">
+  <img src="public/example-add-tool.png" alt="Add Tool" width="600" />
+  <br/>
+  <em>Add Tool: List a new tool for your community</em>
+</p>
+
+---
+
+
+## 🤝 Contributing
+
+We welcome contributions from the community! Whether you want to fix a bug, add a feature, or improve documentation, your help is appreciated.
+
+**How to contribute:**
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
+
+---
+
+
+## 📬 Contact
+
+For questions, suggestions, or feedback, please contact [your-email@example.com](mailto:your-email@example.com).
+
+
+---
+
+<p align="center">
+  <em>Built with ❤️ using Next.js, React, Node.js, Express, and MongoDB.</em>
+</p>
+*Clone the repository:**
+   ```bash
    git clone https://github.com/your-username/community-tool-lending-platform.git
    cd community-tool-lending-platform/my-tool-lending-app
    ```
